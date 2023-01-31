@@ -10,7 +10,9 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/4.1/ref/settings/
 """
 
+import django_heroku
 from pathlib import Path
+import os
 
 import environ
 # Initialise environment variables
@@ -136,6 +138,5 @@ LOGIN_REDIRECT_URL = '/restaurants/'
 
 LOGOUT_REDIRECT_URL = '/'
 
-#configure Django App for Heroku Deploy
-import django_heroku
+# configure Django App for Heroku Deploy
 django_heroku.settings(locals())
